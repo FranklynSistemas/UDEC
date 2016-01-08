@@ -1,0 +1,47 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/Fondo.jpg");
+}
+
+h1 {
+  color: white;
+}
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.div {
+	filter:alpha(opacity=50); 
+	opacity:0.8;
+	background-color: green;
+	border: 1px solid;
+    border-radius: 25px;
+}
+.Login {
+	filter:alpha(opacity=50); 
+	opacity:0.8;
+	background-color: gray;
+	border: 1px solid;
+    border-radius: 25px;
+}
+
+.nombre{
+	color: white;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	text-align: center;
+	float: none;
+    padding: 10px 15px 10px;
+}
+
+
+
+

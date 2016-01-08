@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css'>
+    <link rel='stylesheet', href='/stylesheets/style.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+    <script src='/bootstrap/js/bootstrap.min.js'></script>
+  <body>
+  <div class="div" align="center">
+   <img src="../images/banner.png">
+  </div> 
+  <div class="Login" align="center">
+    <form class="form-horizontal" method="post", id="loginForm", action="/login">
+      <label> Usuario </label>
+      <input class="span3" id="username", type="text", name="usuario", placeholder="Ingrese su Usuario" required>
+      <label> Contraseña</label>
+      <input class="span3" id="password", type="password", name="pass" required>
+      <input class="btn" type="submit", value="Log In", name="enviar">
+      <% if (message.length > 0) { %>
+      <div class="alert alert-danger"> <%=#{message} %> </div> 
+      <% } %>
+      </script>
+    </form>
+  </div>
+  <div class="footer">
+  </div>

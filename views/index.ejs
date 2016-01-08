@@ -1,0 +1,105 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>title</title>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css'>
+    <link rel='stylesheet', href='/stylesheets/style.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+    <script src='/bootstrap/js/bootstrap.min.js'></script>
+  <body>
+  <div class="div" align="center">
+   <img src="../images/banner.png">
+  </div> 
+  <div class="Login" align="center">
+    <form class="form-horizontal" method="post", id="loginForm", action="/login">
+      <label> Usuario </label>
+      <input class="span3" id="username", type="text", name="usuario", placeholder="Ingrese su Usuario" required>
+      <label> Contraseña</label>
+      <input class="span3" id="password", type="password", name="pass" required>
+      <input class="btn" type="submit", value="Log In", name="enviar">
+      <% if (message.length > 0) { %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% } %>
+    </form>
+  </div>
+  <div class="footer">
+  </div>
+  </body>
+  </html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Universidad de Cundinamarca</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css'>    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel='stylesheet', href='/stylesheets/logincss.css'>
+    <link rel='stylesheet', href='/stylesheets/styleLogin.css'>
+    
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        /*
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'http://www.designsave.com');
+        });
+        */    
+    </script>
+</head>
+<body>
+  <!--Inspired by http://tutorialzine.com/2012/02/apple-like-login-form/ - Apple-like Login Form with CSS 3D Transforms -->
+<div class="div" align="center">
+  <img class="imagen" src="../images/banner.png">
+  </div> 
+<div class="container">
+  <div class="row">
+      <div class="container" id="formContainer">
+      
+          <form class="form-signin" id="login" role="form" method="post" id="loginForm" action="/login">
+            <h3 class="form-signin-heading">Ingreso Plataforma UDEC</h3>
+            <a href="#" id="flipToRecover" class="flipLink">
+              <div id="triangle-topright"></div>
+            </a>
+            <input type="text" class="form-control" name="usuario" id="loginEmail" placeholder="Usuario" required autofocus>
+            <input type="password" class="form-control" name="pass" id="loginPass" placeholder="Contraseña" required>
+            <input id"enviar" class="btn btn-lg btn-primary btn-block MiBoton" type="submit" value="Ingresar" name="enviar">
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+          </form>
+          
+           
+          <form class="form-signin" id="recover" role="form">
+            <h3 class="form-signin-heading">Digite su usuario</h3>
+            <a href="#" id="flipToLogin" class="flipLink">
+              <div id="triangle-topleft"></div>
+            </a>
+            <input type="text" class="form-control" name="loginEmail" id="loginEmail" placeholder="Usuario" required autofocus>
+            <button  class="btn  btn-lg btn-primary btn-block MiBoton" type="submit">Recuperar Contraseña</button>
+            
+          </form>
+        </div> <!-- /container -->
+        
+  </div>
+
+</div>
+ <script type="text/javascript" src="/javascripts/script3d.js"></script>
+</body>
+</html>

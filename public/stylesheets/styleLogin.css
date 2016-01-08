@@ -1,0 +1,22 @@
+.div {
+	filter:alpha(opacity=50); 
+	opacity:0.8;
+	background-color: green;
+	border: 1px solid;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.imagen {
+	max-width:100%;
+}
+
+.MiBoton {
+	background-color: #328E08;
+    border-color: #333333;
+}
+
+.MiBoton:hover {
+	background-color: rgba(50, 142, 8, 0.69);
+    border-color: #333333;
+}

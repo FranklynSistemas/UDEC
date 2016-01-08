@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div.navbar.navbar-inverse.navbar-fixed-top
+        div.navbar-inner
+          
+          div.container
+            button.btn.btn-navbar(type='button' data-toggle='collapse' data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand(href="./index.htmlBootstrap")
+            div.nav-collapse.collapse
+              ul.nav
+                li
+                  a(href="/inicio") Inicio
+                li
+                  a(href="/Academico") Academico
+                li
+                  a(href="/Biblioteca") Biblioteca
+                li.active
+                  a(href="/AulaVirtual") Aula Virtual
+                li
+                  a(href="/Pedido") Pedido
+                li
+                  a(href="/cerrar") Cerrar Sesion
+            p.nombre Hola, #{Nombre} 
+    div.marketing
+      h1 Plataforma - Universidad de Cundinamarca
+      p CONTENIDO AULA VIRTUAL
+    hr.soften
+    div.footer

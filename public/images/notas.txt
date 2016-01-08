@@ -1,0 +1,10 @@
+104.196.2.108
+
+server {
+                listen 8080;
+                server_name 104.196.2.108;
+                return 301 $scheme://www.udec.franklyn.plataforma.com$uri;
+        }
+
+
+10.240.0.4

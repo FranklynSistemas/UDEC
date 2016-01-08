@@ -1,0 +1,56 @@
+extends layout
+
+block content
+    div.navbar.navbar-inverse.navbar-fixed-top
+        div.navbar-inner
+          
+          div.container
+            button.btn.btn-navbar(type='button' data-toggle='collapse' data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand(href="./index.htmlBootstrap")
+            div.nav-collapse.collapse
+              ul.nav
+                li.active
+                  a(href="/inicio") Inicio
+                li
+                  a(href="/Academico") Academico
+                li
+                  a(href="/Biblioteca") Biblioteca
+                li
+                  a(href="/AulaVirtual") Aula Virtual
+                li
+                  a(href="/Pedido") Pedido
+                li
+                  a(href="/cerrar") Cerrar Sesion
+            p.nombre Hola, #{Nombre} 
+    div.marketing
+      h1 Plataforma - Universidad de Cundinamarca
+      div.row-fluid
+        div.span3
+          a(href="/Academico")
+            img.marketing-img(src="../images/estudiante.png" width="120" height="120")
+          h2 Academico Estudiante
+          p Necesita conocer su informacion academica, registro de notas, horario, pensum y toda la informacion que usted requiere ingrese: 
+            a(href="/Academico") aqui
+        div.span3
+          a(href="/Biblioteca")
+            img.marketing-img(src="../images/biblioteca.png" width="120" height="120")
+          h2 e-Biblioteca
+          p Necesita consultar algun libro de la biblioteca virtual ingrese:
+            a(href="/Biblioteca") aqui
+        div.span3
+          a(href="/AulaVirtual")
+            img.marketing-img(src="../images/virtual.png" width="120" height="120")
+          h2 Aulas virtuales
+          p Necesita ver sus cursos virtuales y tutorias ingrese:
+            a(href="/AulaVirtual") aqui
+        div.span3
+          a(href="/Pedido")
+            img.marketing-img(src="../images/Solicitud.png" width="120" height="120")
+          h2 Pedido
+          p Necesita realizar alguna solicitud, referente a certificados y demas ingrese:
+            a(href="/Pedido") aqui
+    hr.soften
+    div.footer

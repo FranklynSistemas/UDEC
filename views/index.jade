@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.div(align="center")
+   img(src="../images/banner.png")
+  div.Login(align="center")
+    form.form-horizontal(method="post", id="loginForm", action="/login")
+      label Usuario
+      input.span3(id="username", type="text", name="usuario", placeholder="Ingrese su Usuario" required)
+      label Contraseña
+      input.span3(id="password", type="password", name="pass" required)
+      input.btn(type="submit", value="Log In", name="enviar")
+      -if (message.length > 0) {
+      div.alert.alert-danger #{message} 
+      -}
+  div.footer

@@ -1,0 +1,243 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <a href="#" class="navbar-brand">Universidad de Cundinamarca  - Bienvenido, <%= Nombre %></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/backend">Dashboard</a></li>
+            <li class="dropdown" class="active"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li id="CrearUsuario"><a href="#" id="btn_Crear">Crear Usuario</a></li>
+                  <li id="ModificarUsuario"><a id="btn_Modificar" href="#">Actualizar Usuario</a></li>
+                  <li id="MostrarUsuarios"><a id="btn_Mostrar" href="#">Mostrar Usuarios</a></li>
+                  <li id="ExportarUsuarios"><a id="btn_Export" href="#">Export</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Materias</a></li>
+            <li><a href="#">Reportes</a></li>
+            <li><a href="/cerrar">Cerrar Sesion</a></li>
+          </ul>
+          <!--
+          <form class="navbar-form navbar-right">
+            <input type="text" placeholder="Search..." class="form-control">
+          </form>
+          -->
+        </div>
+      </div>
+    </nav>
+----------------------------------------------------------------------------------------------------------------------------------
+
+<nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Universidad de Cundinamarca  - Bienvenido, <%= Nombre %></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/backend">Dashboard</a></li>
+            <li class="dropdown" class="active"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li id="CrearUsuario"><a href="#" id="btn_Crear">Crear Usuario</a></li>
+                  <li id="ModificarUsuario"><a id="btn_Modificar" href="#">Actualizar Usuario</a></li>
+                  <li id="MostrarUsuarios"><a id="btn_Mostrar" href="#">Mostrar Usuarios</a></li>
+                  <li id="ExportarUsuarios"><a id="btn_Export" href="#">Export</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Materias</a></li>
+            <li><a href="#">Reportes</a></li>
+            <li><a href="/cerrar">Cerrar Sesion</a></li>
+          </ul>
+          <!--
+          <form class="navbar-form navbar-right">
+            <input type="text" placeholder="Search..." class="form-control">
+          </form>
+          -->
+        </div>
+      </div>
+    </nav>
+
+data-spy="scroll" data-target=".scrollspy"
+
+---------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/images/favicon.ico">
+    <title>Administracion</title>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css'>
+    <link rel='stylesheet', href='/stylesheets/Admin.css'>
+    <link rel='stylesheet', href='/stylesheets/jquery.dataTables.min.css'>
+
+
+    <!--<link rel='stylesheet', href='/bootstrap/css/dashboard.css'>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--link(rel="stylesheet",href="css/bootstrap.min.css")-->
+    <!-- Custom styles for this template-->
+    <link href="/bootstrap/css/dashboard.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/jquery-2.0.3.min.js"></script>
+    
+    <script type="text/javascript" src="/javascripts/scripts.js"></script>
+    <script type="text/javascript" src="/javascripts/functions.js"></script>
+
+
+  </head>
+  <body style="padding-top: 0px" data-spy="scroll" data-target=".scrollspy">
+ <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Drafts</a></li>
+                        <li><a href="#">Sent Items</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Trash</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div  class="jumbotron" class="container">
+      <div class="row ">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li id="CrearUsuarioVertical"><a id="btn_CrearV" href="#">Crear Usuario</a></li>
+            <li id="ModificarUsuarioVertical"><a id="btn_ModificarV" href="#">Actualizar Usuario</a></li>
+            <li id="MostrarUsuariosVertical"><a id="btn_MostrarV" href="#">Mostrar Usuarios</a></li>
+            <li id="ExportarUsuariosVertical"><a id="btn_ExportV" href="#">Export</a></li>
+          </ul>
+        </div>
+        <div id="Informacion" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1>Bienvenido aqui encontrara toda la informacion Administrativa</h1>
+        </div>
+        <div id="MuestraUsuarios" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="table-responsive">
+                <h1>Usuarios</h1>
+                <table id="TablaUsuarios" data-toggle="table" class="table table-striped"> 
+              
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Rol</th>
+                    <th>Fecha Creacion</th>
+                    </tr>
+                    </thead>
+                    <tbody id="Muestradatos" >
+
+          </tbody>
+          </table>
+          
+          </div>
+
+        </div>
+
+        <div id="crear" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Usuarios</h1>
+          <h2 class="sub-header">Crear Usuario</h2>
+        <div class="container">
+        <div class="row">
+        <form action="/Usuarios" method="GET">
+            <div class="col-xs-5">
+                <div class="form-group">
+                    <label for="PrimerNombre">Primer Nombre</label>
+                    <input type="text" class="form-control" id="PrimerNombre" name="PrimerNombre" placeholder="Primer Nombre" tabindex='1' required>
+                </div>
+                <div class="form-group">
+                    <label for="Apellidos">Apellidos</label>
+                    <input type="text" class="form-control" id="Apellidos" name="Apellidos" placeholder="Apellidos" tabindex='3' required>
+                </div>
+                <div class="form-group">
+                    <label for="Direccion">Direccion</label>
+                    <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Direccion" tabindex='5' required>
+                </div>
+                <div class="form-group">
+                    <label for="Usuario">Usuario</label>
+                    <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="Usuario" tabindex='7' required>
+                </div>
+                <div class="form-group" >
+                    <label for="lastname">Perfil</label>
+                    <select class="form-control" id="PerfilList" name="PerfilList" tabindex='9'>
+                      <option value="Estudiante">Estudiante</option>
+                      <option value="Profesor">Profesor</option>
+                      <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default" id="btn_Guardar" tabindex='10'>Guardar</button>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-group">
+                    <label for="SegundoNombre">Segundo Nombre</label>
+                    <input type="text" class="form-control" id="SegundoNombre" name="SegundoNombre" placeholder="Segundo Nombre" tabindex='2'>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" tabindex='4' required>
+                </div>
+                <div class="form-group">
+                    <label for="Telefono">Telefono</label>
+                    <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono" tabindex='6' required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" tabindex='8' required>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.dataTables.min.js"></script>
+    <!--script(src="js/jquery.min.js")-->
+    <!--script(src="js/bootstrap.min.js")-->
+  </body>
+</html>
+
